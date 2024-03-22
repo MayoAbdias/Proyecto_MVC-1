@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="card card-warning">
+            <div class="bg-success bg-opacity-75 card card-header">
+                <h4>Nuevo contacto</h4>
+            </div>
+            <div class="card-body">
+                @*/Al formulario le agrego atributos para trabajar con el metodo Registrar pero del tipo POST. *@
+                <form action="@Url.Action("Registrar","Contacto")" method="post">
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input type="text" name="Nombres" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" name="Apellidos" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Telefono</label>
+                        <input type="text" name="Telefono" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="text" name="Correo" class="form-control" />
+                    </div>
+                    <div class="form-group form-control-plaintext">
+                        <button type="submit" class="align-text-top btn btn-primary">Registrar</button>
+                        <a class="align-text-top btn btn-warning" href="@Url.Action("Inicio","Contacto")">Volver</a>
+                    </div>
+                   
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>  
